@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.20348.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico</ApplicationIcon>
+    <Authors>Jim</Authors>
+    <Product>Calculadora</Product>
+    <Copyright>no-copiar</Copyright>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <FileVersion>1.0</FileVersion>
+    <PackageIcon>business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\prueb\Downloads\business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

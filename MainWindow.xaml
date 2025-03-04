@@ -1,0 +1,86 @@
+﻿<Window x:Class="Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculadora"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="500" Width="400" 
+        Background="#fff" Foreground="{x:Null}"
+        >
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Margin="6,60,6,0" Grid.Row="0" x:Name="textB" Foreground="#000" FontSize="30" BorderBrush="#fff" BorderThickness="2"
+               HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" IsReadOnly="True" MaxLength="8" >
+            0
+        </TextBox>
+        <TextBlock Margin="6,6,6,50" FontSize="25" Text="" Foreground="#BDBDBD" TextAlignment="Right" x:Name="digito1"/>
+
+
+        <Grid Grid.Row="1" Margin="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- inicio de los botones de operación-->
+            <Button Grid.Row="0" Grid.Column="0" x:Name="suma" Height="50" Width="auto" Content="+" Click="suma_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="resta" Content="-" Click="resta_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="2" x:Name="multi" Content="x" Click="multi_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="3" x:Name="divi" Content="÷" Click="divi_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="igual" Content="=" Click="igual_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Setters>
+                            <Setter Property="Background" Value="#FF98FFFD"/>
+                        </Style.Setters>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#00f999"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <!-- fin de los botones de operación -->
+
+            <!-- inicio de los números-->
+            <Button Grid.Row="1" Grid.Column="0" x:Name="nro1" Content="1" Click="nro1_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="nro2" Content="2" Click="nro2_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="nro3" Content="3" Click="nro3_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="nro4" Content="4" Click="nro4_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="nro5" Content="5" Click="nro5_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="nro6" Content="6" Click="nro6_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="nro7" Content="7" Click="nro7_Click"></Button>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="nro8" Content="8" Click="nro8_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="nro9" Content="9" Click="nro9_Click"></Button>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="nro0" Content="0" Click="nro0_Click"></Button>
+            <!-- fin de los números-->
+            <!--inicio de botón de  reset-->
+            <Grid Grid.Row="3" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button  Grid.Row="0" x:Name="btnReset" Content="CE" Click="btnReset_Click"></Button>
+                <Button Grid.Row="1" x:Name="btnRemove" Content="◀" Click="btnRemove_Click"></Button>
+
+            </Grid>
+            <!--fin de botón de  reset-->
+
+        </Grid>
+    </Grid>
+
+</Window>
