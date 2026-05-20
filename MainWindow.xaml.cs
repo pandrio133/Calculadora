@@ -292,10 +292,10 @@ namespace Calculadora
         {
             bool condicion = false;
             // forma de verificar lo que hay en el textBox, dice:
-            // si el texto es mayor o igual a 1 digito y el valor debe ser distinto a 0  
-
+            // si el texto es mayor o igual a 1 digito
             if (textB.Text.Length >= 1)
             {
+                // el valor debe ser distinto a 0 ó igual a negativo
                 if (long.TryParse(textB.Text, out long num) && num != 0 || textB.Text == "-")
                 {
                     condicion = true;
