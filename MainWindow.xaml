@@ -16,9 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBox Margin="6,60,6,0" Grid.Row="0" x:Name="textB" Foreground="#000" FontSize="30" BorderBrush="#fff" BorderThickness="2"
-               HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" IsReadOnly="True" MaxLength="8" >
-            0
-        </TextBox>
+               HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" IsReadOnly="True" MaxLength="8" Cursor="IBeam" SelectionBrush="#FFCAE9EC" TextChanged="textB_TextChanged" Text="0" />
         <TextBlock Margin="6,6,6,50" FontSize="25" Text="" Foreground="#BDBDBD" TextAlignment="Right" x:Name="digito1"/>
 
 
