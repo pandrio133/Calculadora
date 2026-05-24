@@ -325,6 +325,11 @@ namespace Calculadora
 
         }
 
+        private void Setter_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             digito1.Text = "";

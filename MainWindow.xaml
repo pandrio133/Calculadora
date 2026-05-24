@@ -20,7 +20,7 @@
         <TextBlock Margin="6,6,6,50" FontSize="25" Text="" Foreground="#BDBDBD" TextAlignment="Right" x:Name="digito1"/>
 
 
-        <Grid Grid.Row="1" Margin="6">
+        <Grid Grid.Row="1" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
@@ -34,19 +34,55 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- inicio de los botones de operación-->
-            <Button Grid.Row="0" Grid.Column="0" x:Name="suma" Height="50" Width="auto" Content="+" Click="suma_Click"></Button>
+            <Button Grid.Row="0" Grid.Column="0" x:Name="suma" Height="50" Width="auto" Content="+" Click="suma_Click">
+                <Button.Style>
+                    <Style>
+                        
+                    </Style>
+                </Button.Style>
+                </Button>
+            
             <Button Grid.Row="0" Grid.Column="1" x:Name="resta" Content="-" Click="resta_Click"></Button>
+            
             <Button Grid.Row="0" Grid.Column="2" x:Name="multi" Content="x" Click="multi_Click"></Button>
-            <Button Grid.Row="0" Grid.Column="3" x:Name="divi" Content="÷" Click="divi_Click"></Button>
-            <Button Grid.Row="3" Grid.Column="3" x:Name="igual" Content="=" Click="igual_Click">
+            
+            <Button Grid.Row="0" Grid.Column="3" x:Name="divi" Content="÷" Click="divi_Click" ></Button>
+            
+            <Button Grid.Row="3" Grid.Column="3" x:Name="igual"  Click="igual_Click">
+                
                 <Button.Style>
                     <Style TargetType="Button">
-                        <Style.Setters>
-                            <Setter Property="Background" Value="#FF98FFFD"/>
-                        </Style.Setters>
-                        <Style.Triggers>
+
+                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+
+                        <Setter Property="Background" Value="#FF98FFFD"/>
+
+                        <Setter Property="Foreground" Value="Black" />
+                        <Setter Property="FontFamily" Value="Segoe UI"/>
+                        <Setter Property="Content" Value="=" />
+                        <Setter Property="FontSize" Value="25px"/>
+
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                            BorderBrush="Black"
+                                            BorderThickness="1"
+                                            CornerRadius="5">
+                                        <ContentPresenter 
+                                            Content="{TemplateBinding Content}"
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                                        
+                                    </Border>
+                                    
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter> 
+
+                            <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#00f999"/>
+                                <Setter Property="Background" Value="#2AA6A6"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
