@@ -34,22 +34,22 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- inicio de los botones de operación-->
-            <Button Grid.Row="0" Grid.Column="0" x:Name="suma" Height="50" Width="auto" Content="+" Click="suma_Click">
+            <Button Grid.Row="0" Grid.Column="0" x:Name="suma" Height="50" Width="auto" Content="+" Click="suma_Click" Background="#FF507385">
                 <Button.Style>
                     <Style>
-                        
+
                     </Style>
                 </Button.Style>
-                </Button>
-            
-            <Button Grid.Row="0" Grid.Column="1" x:Name="resta" Content="-" Click="resta_Click"></Button>
-            
-            <Button Grid.Row="0" Grid.Column="2" x:Name="multi" Content="x" Click="multi_Click"></Button>
-            
-            <Button Grid.Row="0" Grid.Column="3" x:Name="divi" Content="÷" Click="divi_Click" ></Button>
-            
+            </Button>
+
+            <Button Grid.Row="0" Grid.Column="1" x:Name="resta" Content="-" Click="resta_Click" Background="#FF507385"/>
+
+            <Button Grid.Row="0" Grid.Column="2" x:Name="multi" Content="x" Click="multi_Click" Background="#FF507385"/>
+
+            <Button Grid.Row="0" Grid.Column="3" x:Name="divi" Content="÷" Click="divi_Click" Background="#FF507385" />
+
             <Button Grid.Row="3" Grid.Column="3" x:Name="igual"  Click="igual_Click">
-                
+
                 <Button.Style>
                     <Style TargetType="Button">
 
@@ -73,14 +73,14 @@
                                             Content="{TemplateBinding Content}"
                                             HorizontalAlignment="Center" 
                                             VerticalAlignment="Center"/>
-                                        
+
                                     </Border>
-                                    
+
                                 </ControlTemplate>
                             </Setter.Value>
-                        </Setter> 
+                        </Setter>
 
-                            <Style.Triggers>
+                        <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#2AA6A6"/>
                             </Trigger>
@@ -91,16 +91,16 @@
             <!-- fin de los botones de operación -->
 
             <!-- inicio de los números-->
-            <Button Grid.Row="1" Grid.Column="0" x:Name="nro1" Content="1" Click="nro1_Click"></Button>
-            <Button Grid.Row="1" Grid.Column="1" x:Name="nro2" Content="2" Click="nro2_Click"></Button>
-            <Button Grid.Row="1" Grid.Column="2" x:Name="nro3" Content="3" Click="nro3_Click"></Button>
-            <Button Grid.Row="1" Grid.Column="3" x:Name="nro4" Content="4" Click="nro4_Click"></Button>
-            <Button Grid.Row="2" Grid.Column="0" x:Name="nro5" Content="5" Click="nro5_Click"></Button>
-            <Button Grid.Row="2" Grid.Column="1" x:Name="nro6" Content="6" Click="nro6_Click"></Button>
-            <Button Grid.Row="2" Grid.Column="2" x:Name="nro7" Content="7" Click="nro7_Click"></Button>
-            <Button Grid.Row="2" Grid.Column="3" x:Name="nro8" Content="8" Click="nro8_Click"></Button>
-            <Button Grid.Row="3" Grid.Column="0" x:Name="nro9" Content="9" Click="nro9_Click"></Button>
-            <Button Grid.Row="3" Grid.Column="1" x:Name="nro0" Content="0" Click="nro0_Click"></Button>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="nro1" Content="1" Click="nro1_Click" Background="#FF507385"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="nro2" Content="2" Click="nro2_Click" Background="#FF507385"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="nro3" Content="3" Click="nro3_Click" Background="#FF507385"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="nro4" Content="4" Click="nro4_Click" Background="#FF507385"/>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="nro5" Content="5" Click="nro5_Click" Background="#FF507385"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="nro6" Content="6" Click="nro6_Click" Background="#FF507385"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="nro7" Content="7" Click="nro7_Click" Background="#FF507385"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="nro8" Content="8" Click="nro8_Click" Background="#FF507385"/>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="nro9" Content="9" Click="nro9_Click" Background="#FF507385"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="nro0" Content="0" Click="nro0_Click" Background="#FF507385"/>
             <!-- fin de los números-->
             <!--inicio de botón de  reset-->
             <Grid Grid.Row="3" Grid.Column="2">
@@ -108,8 +108,8 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Button  Grid.Row="0" x:Name="btnReset" Content="CE" Click="btnReset_Click"></Button>
-                <Button Grid.Row="1" x:Name="btnRemove" Content="◀" Click="btnRemove_Click"></Button>
+                <Button  Grid.Row="0" x:Name="btnReset" Content="CE" Click="btnReset_Click" Background="#FF507385"/>
+                <Button Grid.Row="1" x:Name="btnRemove" Content="◀" Click="btnRemove_Click" Background="#FF507385"/>
 
             </Grid>
             <!--fin de botón de  reset-->
