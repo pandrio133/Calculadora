@@ -148,7 +148,7 @@ namespace Calculadora
             if (digito1.Text.Contains('+'))
             {
             }
-            else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
+            else if (textB.Text.Length == 1 && textB.Text[textB.Text.Length - 1] == '-')
             {
             }
             else if (digito1.Text.Contains('-') || digito1.Text.Contains('x') || digito1.Text.Contains('÷'))
@@ -176,7 +176,7 @@ namespace Calculadora
             {
                 textB.Text = "0";
             }
-            if (UltNro[UltNro.Length - 1] == '-')
+            if (textB.Text.Length == 1 && textB.Text[textB.Text.Length - 1] == '-')
             {
             }
             else if (long.TryParse(textB.Text, out long nro) && nro == 0)// el numero es igual a 0
@@ -209,7 +209,7 @@ namespace Calculadora
             if (UltNro.Contains('x'))
             {
             }
-            else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
+            else if (textB.Text.Length == 1 && textB.Text[textB.Text.Length - 1] == '-')
             {
             }
             else if (digito1.Text.Contains('+') || digito1.Text.Contains('-') || digito1.Text.Contains('÷'))
@@ -239,7 +239,7 @@ namespace Calculadora
             if (UltNro.Contains('÷'))
             {
             }
-            else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
+            else if (textB.Text.Length == 1 && textB.Text[textB.Text.Length - 1] == '-')
             {
             }
             else if (digito1.Text.Contains('+') || digito1.Text.Contains('x') || digito1.Text.Contains('-'))
@@ -250,9 +250,7 @@ namespace Calculadora
 
             }
             else if (verificacion())
-            {
-
-                digito1.Text = textB.Text + operador;
+            {   digito1.Text = textB.Text + operador;
                 textB.Clear();
                 textB.Text = "0";
             }
