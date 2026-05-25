@@ -6,21 +6,37 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico</ApplicationIcon>
+    <ApplicationIcon>IconoCalculadora.ico</ApplicationIcon>
     <Authors>Jim</Authors>
     <Product>Calculadora</Product>
     <Copyright>no-copiar</Copyright>
     <AssemblyVersion>1.0</AssemblyVersion>
     <FileVersion>1.0</FileVersion>
-    <PackageIcon>business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico</PackageIcon>
+    <PackageIcon>IconoCalculadora.ico</PackageIcon>
+    <NeutralLanguage>es</NeutralLanguage>
+    <Description>Es una calculador en desarrollo</Description>
+    <PackageId>Calculadora</PackageId>
+    <Title>Calculadora</Title>
+    <RepositoryUrl>https://github.com/pandrio133/Calculadora.git</RepositoryUrl>
+    <PackAsTool>True</PackAsTool>
+    <ToolCommandName>Calculadora</ToolCommandName>
+    <SignAssembly>False</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <FileAlignment>512</FileAlignment>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico" />
+    <Content Include="IconoCalculadora.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\prueb\Downloads\business_calculating_calculation_calculate_calculator_maths_finance_and_icon_262280.ico">
+    <None Update="IconoCalculadora.ico">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
