@@ -144,7 +144,9 @@ namespace Calculadora
 
             if (UltNro.Contains('+'))
             {
-
+            }
+            else if (UltNro[textB.Text.Length-1] == '-')
+            {
             }
             else if (digito1.Text.Contains('-') || digito1.Text.Contains('x') || digito1.Text.Contains('÷'))
             {
@@ -160,10 +162,7 @@ namespace Calculadora
                 textB.Clear();
 
             }
-            else if (textB.Text.Length - 1 == '+')
-            {
-
-            }
+            
         }
 
         private void resta_Click(object sender, RoutedEventArgs e)
@@ -199,7 +198,9 @@ namespace Calculadora
 
             if (UltNro.Contains('x'))
             {
-
+            }
+            else if (UltNro[textB.Text.Length - 1] == '-')
+            {
             }
             else if (digito1.Text.Contains('+') || digito1.Text.Contains('-') || digito1.Text.Contains('÷'))
             {
@@ -215,10 +216,7 @@ namespace Calculadora
                 textB.Clear();
 
             }
-            else if (digito1.Text.Length - 1 == '-')
-            {
-
-            }
+            
         }
         private void divi_Click(object sender, RoutedEventArgs e)
         {
@@ -227,7 +225,9 @@ namespace Calculadora
 
             if (UltNro.Contains('÷'))
             {
-
+            }
+            else if (UltNro[textB.Text.Length - 1] == '-')
+            {
             }
             else if (digito1.Text.Contains('+') || digito1.Text.Contains('x') || digito1.Text.Contains('-'))
             {
