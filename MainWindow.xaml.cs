@@ -141,8 +141,11 @@ namespace Calculadora
         {
             operador = '+';
             UltNro = textB.Text.ToCharArray();
-
-            if (UltNro.Contains('+'))
+            if (textB.Text == null)
+            {
+                textB.Text = "0";
+            }
+            if (digito1.Text.Contains('+'))
             {
             }
             else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
@@ -168,11 +171,15 @@ namespace Calculadora
         private void resta_Click(object sender, RoutedEventArgs e)
         {
             operador = '-';
-            UltNro = textB.Text.ToCharArray();
+            UltNro = digito1.Text.ToCharArray();
+            if (textB.Text == null)
+            {
+                textB.Text = "0";
+            }
             if (UltNro[UltNro.Length - 1] == '-')
             {
             }
-            else if (textB.Text == null || long.TryParse(textB.Text, out long nro) && nro == 0)// actualizar
+            else if (long.TryParse(textB.Text, out long nro) && nro == 0)// el numero es igual a 0
             {
                 textB.Text = "-";
             }
@@ -194,8 +201,11 @@ namespace Calculadora
         private void multi_Click(object sender, RoutedEventArgs e)
         {
             operador = 'x';
-            UltNro = textB.Text.ToCharArray();
-
+            UltNro = digito1.Text.ToCharArray();
+            if (textB.Text == null)
+            {
+                textB.Text = "0";
+            }
             if (UltNro.Contains('x'))
             {
             }
@@ -221,8 +231,11 @@ namespace Calculadora
         private void divi_Click(object sender, RoutedEventArgs e)
         {
             operador = '÷';
-            UltNro = textB.Text.ToCharArray();
-
+            UltNro = digito1.Text.ToCharArray();
+            if (textB.Text == null)
+            {
+                textB.Text = "0";
+            }
             if (UltNro.Contains('÷'))
             {
             }
@@ -241,7 +254,7 @@ namespace Calculadora
 
                 digito1.Text = textB.Text + operador;
                 textB.Clear();
-
+                textB.Text = "0";
             }
 
         }
@@ -259,7 +272,7 @@ namespace Calculadora
                         res = a + b;
                         textB.Clear();
                         digito1.Text = String.Concat(res);
-
+                        textB.Text = "0";
                         break;
                     case '-':
                         a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
@@ -267,6 +280,7 @@ namespace Calculadora
                         res = a - b;
                         textB.Clear();
                         digito1.Text = String.Concat(res);
+                        textB.Text = "0";
                         break;
                     case 'x':
                         a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
@@ -274,6 +288,7 @@ namespace Calculadora
                         res = a * b;
                         textB.Clear();
                         digito1.Text = String.Concat(res);
+                        textB.Text = "0";
                         break;
                     case '÷':
                         a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
@@ -281,6 +296,7 @@ namespace Calculadora
                         res = (double)a / b;
                         textB.Clear();
                         digito1.Text = String.Concat(res);
+                        textB.Text = "0";
                         break;
                     default: break;
                 }
