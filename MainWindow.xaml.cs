@@ -243,48 +243,47 @@ namespace Calculadora
                 textB.Clear();
 
             }
-            else if (digito1.Text.Length - 1 == '÷')
-            {
 
-            }
         }
 
         private void igual_Click(object sender, RoutedEventArgs e)
         {
-            char[] UNro = digito1.Text.ToCharArray();
-
-            switch (UNro[digito1.Text.Length - 1])
+            if (digito1 !=null && digito1.Text.Length > 0)
             {
-                case '+':
-                    a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
-                    b = long.Parse(textB.Text);
-                    res = a + b;
-                    textB.Clear();
-                    digito1.Text = String.Concat(res);
+                char[] UNro = digito1.Text.ToCharArray();
+                switch (UNro[digito1.Text.Length - 1])
+                {
+                    case '+':
+                        a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
+                        b = long.Parse(textB.Text);
+                        res = a + b;
+                        textB.Clear();
+                        digito1.Text = String.Concat(res);
 
-                    break;
-                case '-':
-                    a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
-                    b = long.Parse(textB.Text);
-                    res = a - b;
-                    textB.Clear();
-                    digito1.Text = String.Concat(res);
-                    break;
-                case 'x':
-                    a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
-                    b = long.Parse(textB.Text);
-                    res = a * b;
-                    textB.Clear();
-                    digito1.Text = String.Concat(res);
-                    break;
-                case '÷':
-                    a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
-                    b = long.Parse(textB.Text);
-                    res = (double)a / b;
-                    textB.Clear();
-                    digito1.Text = String.Concat(res);
-                    break;
-                default: break;
+                        break;
+                    case '-':
+                        a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
+                        b = long.Parse(textB.Text);
+                        res = a - b;
+                        textB.Clear();
+                        digito1.Text = String.Concat(res);
+                        break;
+                    case 'x':
+                        a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
+                        b = long.Parse(textB.Text);
+                        res = a * b;
+                        textB.Clear();
+                        digito1.Text = String.Concat(res);
+                        break;
+                    case '÷':
+                        a = long.Parse(digito1.Text.Remove(digito1.Text.Length - 1));
+                        b = long.Parse(textB.Text);
+                        res = (double)a / b;
+                        textB.Clear();
+                        digito1.Text = String.Concat(res);
+                        break;
+                    default: break;
+                }
             }
         }
 
