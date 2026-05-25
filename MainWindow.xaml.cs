@@ -145,7 +145,7 @@ namespace Calculadora
             if (UltNro.Contains('+'))
             {
             }
-            else if (UltNro[textB.Text.Length-1] == '-')
+            else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
             {
             }
             else if (digito1.Text.Contains('-') || digito1.Text.Contains('x') || digito1.Text.Contains('÷'))
@@ -160,20 +160,19 @@ namespace Calculadora
             {
                 digito1.Text = textB.Text + operador;
                 textB.Clear();
-
+                textB.Text = "0";
             }
-            
+
         }
 
         private void resta_Click(object sender, RoutedEventArgs e)
         {
             operador = '-';
             UltNro = textB.Text.ToCharArray();
-            if (UltNro.Contains('-'))
+            if (UltNro[UltNro.Length - 1] == '-')
             {
-
             }
-            else if (long.Parse(textB.Text) == 0 || textB.Text == null && textB.Text != "-")// actualizar
+            else if (textB.Text == null || long.TryParse(textB.Text, out long nro) && nro == 0)// actualizar
             {
                 textB.Text = "-";
             }
@@ -187,6 +186,7 @@ namespace Calculadora
             {
                 digito1.Text = textB.Text + operador;
                 textB.Clear();
+                textB.Text = "0";
             }
 
         }
@@ -199,7 +199,7 @@ namespace Calculadora
             if (UltNro.Contains('x'))
             {
             }
-            else if (UltNro[textB.Text.Length - 1] == '-')
+            else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
             {
             }
             else if (digito1.Text.Contains('+') || digito1.Text.Contains('-') || digito1.Text.Contains('÷'))
@@ -214,9 +214,9 @@ namespace Calculadora
 
                 digito1.Text = textB.Text + operador;
                 textB.Clear();
-
+                textB.Text = "0";
             }
-            
+
         }
         private void divi_Click(object sender, RoutedEventArgs e)
         {
@@ -226,7 +226,7 @@ namespace Calculadora
             if (UltNro.Contains('÷'))
             {
             }
-            else if (UltNro[textB.Text.Length - 1] == '-')
+            else if (UltNro.Length == 1 && UltNro[UltNro.Length - 1] == '-')
             {
             }
             else if (digito1.Text.Contains('+') || digito1.Text.Contains('x') || digito1.Text.Contains('-'))
@@ -248,7 +248,7 @@ namespace Calculadora
 
         private void igual_Click(object sender, RoutedEventArgs e)
         {
-            if (digito1 !=null && digito1.Text.Length > 0)
+            if (digito1 != null && digito1.Text.Length > 0)
             {
                 char[] UNro = digito1.Text.ToCharArray();
                 switch (UNro[digito1.Text.Length - 1])
